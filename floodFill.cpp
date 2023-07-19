@@ -9,6 +9,7 @@ class Solution {
         if(vis[sr][sc]==true)return;
         vis[sr][sc]=false;
         for(int i=0;i<4;i++){
+            
             if(pos(sr+dir[i],sc+dir[i+1],mat) && !vis[sr+dir[i]][sc+dir[i+1]] && mat[sr+dir[i]][sc+dir[i+1]]==initial){
             mat[sr+dir[i]][sc+dir[i+1]]=newColor;
             dfs(sr+dir[i],sc+dir[i+1],vis,mat,initial,newColor);
